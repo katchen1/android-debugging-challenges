@@ -2,6 +2,8 @@ package com.codepath.debuggingchallenges.activities;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.util.Log;
 import android.widget.TextView;
 
 import com.codepath.debuggingchallenges.R;
@@ -20,8 +22,8 @@ public class CurrentDayActivity extends AppCompatActivity {
         tvDay.setText(getDayOfMonth());
     }
 
-    private int getDayOfMonth() {
+    private String getDayOfMonth() {
         Calendar cal = Calendar.getInstance();
-        return cal.get(Calendar.DAY_OF_MONTH);
+        return cal.get(Calendar.DAY_OF_MONTH) + "";
     }
 }
